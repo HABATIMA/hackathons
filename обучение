@@ -1,0 +1,13 @@
+# Обучаем модель на предобработанных изображениях
+history = model.fit(
+    input_images,
+    target_images,
+    batch_size=16,
+    epochs=25,  # количество эпох
+    validation_split=0.1,
+    callbacks=[checkpoint_callback]
+)
+
+# Сохраняем обученную модель
+timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+model.save(f'super_resolution_model_{timestamp}.h5')
