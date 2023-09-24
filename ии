@@ -11,7 +11,7 @@ from keras.losses import MeanSquaredError
 from keras.callbacks import ModelCheckpoint
 from datetime import datetime
 
-# найти готовое решение, попробовать запустить и переобучить. 
+
 
 def create_super_resolution_model(input_shape=(144, 256, 3)):
     input_img = Input(shape=input_shape)
